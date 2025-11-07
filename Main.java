@@ -12,19 +12,15 @@ public class Main {
         double total = 0;
 
         for (int i = 1; i <= consumption; i++) {
-            double formula = 0;
 
             if (i <= 100) {
-                formula = i * 0.8;
+                total = i * 0.8;
             } else if (i > 100 && i <= 300) {
-                formula = i * 1.2;
+                total = i * 1.2;
             } else if (i > 300) {
-                formula = i * 1.5;
+                total = i * 1.5;
             }
-
-            if (i == 100) {
-            }
-            total += formula;
+            
         }
 
 
@@ -34,6 +30,9 @@ public class Main {
         System.out.println("Facture avant taxe : " + fixedNum);
         System.out.println("Taxe (10%) : " + (total / 100) * 10);
         System.out.println("Facture totale : " + Double.parseDouble(fixedNum) + ((total / 100) * 10));
+
+//        <-- Challenge 2 -->
+
 
         scanner.close();
     }
